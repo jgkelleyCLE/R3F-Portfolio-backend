@@ -41,6 +41,10 @@ export const sendMail = async(req, res) => {
 
       let info = await transporter.sendMail(mailOptions);
 
-        res.send('Email sent: ' + info.response);
+        // res.send('Email sent: ' + info.response);
+        res.json({ 
+          message: "Email sent successfully", 
+          details: "250 2.0.0 OK..." 
+        });
 
 }
