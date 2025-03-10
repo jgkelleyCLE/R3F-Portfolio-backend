@@ -17,11 +17,11 @@ export const getScores = async(req, res) => {
 //POST SCORE
 export const postScore = async(req, res) => {
 
-    const { username, time } = req.body
+    const { username, time, device, character } = req.body
 
     try {
         
-        const newScore = await Score.create({username, time})
+        const newScore = await Score.create({username, time, device, character})
         res.status(201).json(newScore)
 
     } catch (error) {

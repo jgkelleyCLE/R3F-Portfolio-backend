@@ -9,6 +9,14 @@ const ScoreSchema = new mongoose.Schema({
     time: {
         type: Number,
         required: true,
+    },
+    device: {
+        type: String,
+        required: false,
+    },
+    character: {
+        type: String,
+        required: false,
     }
 }, { timestamps: true });
 

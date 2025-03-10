@@ -38,7 +38,17 @@ const ProjectSchema = new mongoose.Schema({
                 required: true
             }
         }
-    ]
+    ],
+    position: {
+        x: { type: Number, default: 0 },
+        y: { type: Number, default: 0 },
+        z: { type: Number, default: 0 }
+      },
+      rotation: {
+        x: { type: Number, default: 0 },
+        y: { type: Number, default: 0 },
+        z: { type: Number, default: 0 }
+      }
 }, { timestamps: true })
 
 const Project = mongoose.model('Project', ProjectSchema)
