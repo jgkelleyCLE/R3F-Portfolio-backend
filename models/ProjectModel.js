@@ -9,6 +9,10 @@ const ProjectSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    shortDescription: {
+        type: String,
+        required: false
+    },
     link: {
         type: String,
         required: true
