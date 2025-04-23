@@ -5,6 +5,7 @@ import mongoose from 'mongoose'
 import scoresRoutes from './routes/ScoreRoutes.js'
 import projectRoutes from './routes/ProjectRoutes.js'
 import emailRoutes from './routes/EmailRoutes.js'
+import contactRoutes from './routes/ContactRoutes.js'
 
 const app = express()
 
@@ -32,6 +33,7 @@ connectionObj.on('connected', ()=> {
 app.use('/api/scores', scoresRoutes)
 app.use('/api/projects', projectRoutes)
 app.use('/api/mail', emailRoutes)
+app.use('/api/contact', contactRoutes)
 
 app.listen(port, ()=> {
     console.log(`Server is running on port ${port}`)
