@@ -1,8 +1,8 @@
 import express from 'express'
-import { sendContact } from '../controllers/Contact'
+import { sendContact } from '../controllers/Contact.js'
 
 const router = express.Router()
 
-router.post('/contact', sendContact)
+router.post('/', sendContact)
 
 export default router
